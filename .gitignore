@@ -1,0 +1,30 @@
+# 只放需要提交远程代码库的
+# 最左边带'!'的表示不能忽略
+# 左边带'/'的表示不递归
+# *匹配多个字符，支持正则
+# 名称后面带'/'表示忽略的是目录
+
+# 以下需要忽略，可以在自己的开发环境修改以下列表的文件
+.git/
+.vscode/settings.json
+bin/*
+conf/*
+pkg/*
+log/*
+src/github.com/
+src/golang.org/
+# 忽略所有目录下的vendor目录
+vendor/
+debug
+Gopkg.lock
+Gopkg.toml
+
+# 以下不能忽略，请勿在自己电脑上随便改动
+!.gitignore
+!build.sh
+!docker_build
+!mongos.conf
+!mongos.sh
+!readme.md
+!server.sh
+!.vscode/launch.json
