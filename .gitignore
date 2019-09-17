@@ -18,6 +18,8 @@ vendor/
 debug
 Gopkg.lock
 Gopkg.toml
+__pycache__/
+
 
 # 以下不能忽略，请勿在自己电脑上随便改动
 !.gitignore
