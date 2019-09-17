@@ -9,7 +9,7 @@ import sys
 PROJECT_ROOT = os.path.realpath(os.path.dirname(__file__))
 sys.path.insert(0, os.path.join(PROJECT_ROOT, os.pardir))
 
-from linked_list.base import get_link, Node
+from linked_list.base import get_link, Node, scan
 
 
 def swap_pairs(head):
@@ -32,13 +32,12 @@ def swapPairs(head):
         pre = a
     return res.next
 
+
 if __name__ == '__main__':
 
     head = get_link()
     r = swapPairs(head)
-    while r:
-        print(r)
-        r = r.next
+    scan(r)
 
     
 

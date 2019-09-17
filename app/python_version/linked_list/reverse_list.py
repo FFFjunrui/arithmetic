@@ -8,7 +8,7 @@ import sys
 PROJECT_ROOT = os.path.realpath(os.path.dirname(__file__))
 sys.path.insert(0, os.path.join(PROJECT_ROOT, os.pardir))
 
-from linked_list.base import get_link
+from linked_list.base import get_link, scan, get_link_cycle
  
 
 def reverse_list(head):
@@ -23,14 +23,6 @@ def reverse_list(head):
 
 
 if __name__ == '__main__':
-
-    head = get_link()
-    # while head:
-    #     print(head.value, )
-    #     head = head.next
-
+    head = get_link_cycle()
     newhead = reverse_list(head)
-    while newhead:
-        print(newhead.value, )
-        newhead = newhead.next
-    
+    scan(head)
