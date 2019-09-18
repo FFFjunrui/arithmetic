@@ -16,10 +16,10 @@ def reverse_list(head):
     :type head: ListNode
     :rtype: ListNode
     """
-    p, rev = head, None
-    while p:
-        rev, rev.next, p = p, rev, p.next
-    return rev
+    cursor, prev = head, None
+    while cursor:
+        prev, prev.next, cursor = cursor, prev, cursor.next
+    return prev
 
 
 if __name__ == '__main__':
