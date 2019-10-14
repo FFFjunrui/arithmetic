@@ -6,8 +6,8 @@
 
 
 class Node(object):
-    def __init__(self):
-        self.value = None
+    def __init__(self, val=None):
+        self.value = val
         self.next = None
 
     def __str__(self):
